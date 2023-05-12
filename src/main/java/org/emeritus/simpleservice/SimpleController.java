@@ -29,4 +29,9 @@ public class SimpleController {
     public ResponseEntity<Book> createBook(@RequestBody final Book book) {
         return new ResponseEntity<>(simpleService.addBook(book), HttpStatus.CREATED);
     }
+    
+    @GetMapping(path="/testing")
+    public Integer testing(){
+        return 2;
+    }
 }
